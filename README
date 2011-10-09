@@ -1,0 +1,41 @@
+description:
+
+  this plugin name is "sunday.vim" (vim-sunday is repositories name).
+
+  sunday.vim is inspired by monday.vim
+    monday.vim vim.org(http://www.vim.org/scripts/script.php?script_id=1046).
+
+What's the difference of monday.vim & sunday.vim?
+
+  sunday.vim is supporting specifed pairs(variable is 'g:sunday_pairs')
+  (NOTE: g:sunday_pairs will no longer be in the future.)
+
+Default pairs list:
+
+  yes <-> no
+  true <-> false
+  weekday (sunday <-> monday <-> wednesday <- .. -> saturday <-> sunday)
+  weekday-shorten (sun <-> mon <-> .. sat <-> sun)
+  month (january <-> february <-> .. <-> december <-> january)
+  month-shorten (jan <-> feb .. dec <-> jan)
+  public <-> protected <-> private
+
+For example:
+
+  " Your .vimrc
+  let g:sunday_pairs = [
+    \   ['extends', 'implements'],
+    \   ['require', 'require_once', 'imclude', 'include_once'],
+    \ ]
+
+    =>
+
+  extends <-> implements
+  require <-> require_once <-> imclude <-> include_once <-> require
+
+
+FUTURE:
+
+  * custom mapping (ex. nnoremap <Leader>a (sunday#increase))
+  * support filetype pairs list.
+  * performance tuning.
