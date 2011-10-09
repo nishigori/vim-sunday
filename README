@@ -13,6 +13,7 @@ What's the difference of monday.vim & sunday.vim?
 Default pairs list:
 
   yes <-> no
+  on <-> off
   true <-> false
   weekday (sunday <-> monday <-> wednesday <- .. -> saturday <-> sunday)
   weekday-shorten (sun <-> mon <-> .. sat <-> sun)
