@@ -2,8 +2,16 @@ description:
 
   this plugin name is "sunday.vim" (vim-sunday is repositories name).
 
-  sunday.vim is inspired by monday.vim
-    monday.vim vim.org(http://www.vim.org/scripts/script.php?script_id=1046).
+  sunday.vim is inspired ...
+    Inspired1: monday
+      Name: monday.vim
+      CreatedBy:   Stefan Karlsson <stefan.74@comhem.se>
+      Url:  http://www.vim.org/scripts/script.php?script_id=1046
+      Purpose:  To make <ctrl-a> and <ctrl-x> operate on the names of weekdays
+                and months.
+    Inspired2: monday_custom
+      CreateBy: Taku Omi <http://nanasi.jp/>
+      Url: http://nanasi.jp/articles/vim/monday_vim.html
 
 What's the difference of monday.vim & sunday.vim?
 
@@ -12,8 +20,8 @@ What's the difference of monday.vim & sunday.vim?
 
 Default pairs list:
 
-  yes <-> no
-  on <-> off
+  yes  <-> no
+  on   <-> off
   true <-> false
   weekday (sunday <-> monday <-> wednesday <- .. -> saturday <-> sunday)
   weekday-shorten (sun <-> mon <-> .. sat <-> sun)
@@ -39,4 +47,4 @@ FUTURE:
 
   * custom mapping (ex. nnoremap <Leader>a (sunday#increase))
   * support filetype pairs list.
-  * performance tuning.
+  * performance turning.
