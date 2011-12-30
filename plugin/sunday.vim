@@ -91,7 +91,7 @@ function s:IncDec(inc_or_dec) "{{{
     while i < N
       let w = expand('<cword>')
       if s:words =~# '\<' . w . ':'
-        let n = match(s:words, w . ':\i\+\C')
+        let n = match(s:words, '\<' . w . ':\i\+\C')
         let n = match(s:words, ':', n)
         let a = matchstr(s:words, '\i\+', n)
         execute "normal ciw" . a
