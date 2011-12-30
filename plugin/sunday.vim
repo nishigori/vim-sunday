@@ -63,7 +63,7 @@ function! sunday#addPairs(lists)  "{{{
     endfor
   endfor
 endfunction "}}}
-function s:AddPair(word1, word2) "{{{
+function! s:AddPair(word1, word2) "{{{
   let w10 = tolower(a:word1)
   let w11 = toupper(matchstr(w10, '.')) . matchstr(w10, '.*', 1)
   let w12 = toupper(w10)
@@ -76,7 +76,7 @@ function s:AddPair(word1, word2) "{{{
   let s:words = s:words . w11 . ':' . w21 . ','
   let s:words = s:words . w12 . ':' . w22 . ','
 endfunction "}}}
-function s:MakeMapping(inc_or_dec) "{{{
+function! s:MakeMapping(inc_or_dec) "{{{
   if a:inc_or_dec == 'inc' || a:inc_or_dec == 'both'
     nnoremap <silent> <c-a> :<c-u>call <SID>IncDec('inc')<CR>
   endif
@@ -84,7 +84,7 @@ function s:MakeMapping(inc_or_dec) "{{{
     nnoremap <silent> <c-x> :<c-u>call <SID>IncDec('dec')<CR>
   endif
 endfunction "}}}
-function s:IncDec(inc_or_dec) "{{{
+function! s:IncDec(inc_or_dec) "{{{
   let N = (v:count < 1) ? 1 : v:count
   let i = 0
   if a:inc_or_dec == 'inc'
