@@ -103,10 +103,8 @@ function! s:IncDec(inc_or_dec) "{{{
   else "inc_or_dec == 'dec'
     while i < N
       let w = expand('<cword>')
-
       if s:words =~# ':' . w . '\>'
-        let n = match(s:words, '\i\+\C:' . w)
-        let a = matchstr(s:words, '\i\+', n)
+        let a = matchstr(s:words, '\zs[^,:]\+\ze:' . w . '\>\C')
         execute "normal ciw" . a
       else
         nunmap <c-x>
