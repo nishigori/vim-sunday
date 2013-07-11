@@ -65,11 +65,11 @@ function! sunday#addPairs(lists)  "{{{
 endfunction "}}}
 function! s:AddPair(word1, word2) "{{{
   let w10 = tolower(a:word1)
-  let w11 = toupper(matchstr(w10, '.')) . matchstr(w10, '.*', 1)
+  let w11 = toupper(matchstr(w10, '.')) . matchstr(w10, '^.\zs.*')
   let w12 = toupper(w10)
 
   let w20 = tolower(a:word2)
-  let w21 = toupper(matchstr(w20, '.')) . matchstr(w20, '.*', 1)
+  let w21 = toupper(matchstr(w20, '.')) . matchstr(w20, '^.\zs.*')
   let w22 = toupper(w20)
 
   let s:words = s:words . w10 . ':' . w20 . ','
@@ -91,9 +91,7 @@ function! s:IncDec(inc_or_dec) "{{{
     while i < N
       let w = expand('<cword>')
       if s:words =~# '\<' . w . ':'
-        let n = match(s:words, '\<' . w . ':\i\+\C')
-        let n = match(s:words, ':', n)
-        let a = matchstr(s:words, '\i\+', n)
+        let a = matchstr(s:words, '\<' . w . ':\zs[^,]\+\ze\C')
         execute "normal ciw" . a
       else
         nunmap <c-a>
