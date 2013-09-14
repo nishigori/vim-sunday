@@ -34,13 +34,13 @@ For example:
   " Your .vimrc
   let g:sunday_pairs = [
     \   ['extends', 'implements'],
-    \   ['require', 'require_once', 'imclude', 'include_once'],
+    \   ['require', 'require_once', 'include', 'include_once'],
     \ ]
 
     =>
 
   extends <-> implements
-  require <-> require_once <-> imclude <-> include_once <-> require
+  require <-> require_once <-> include <-> include_once <-> require
 
 
 FUTURE:
