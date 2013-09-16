@@ -92,3 +92,9 @@ Inspired by
 
 [monday.vim]:       http://www.vim.org/scripts/script.php?script_id=1046
 [monday-custom]:    http://nanasi.jp/articles/vim/monday_vim.html
+
+
+LICENSE
+-------
+
+Sunday.vim is released under the MIT License. See the bundled LICENSE file for details.
