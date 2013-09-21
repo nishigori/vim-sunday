@@ -1,11 +1,13 @@
 Sunday.vim
 ==========
 
-Switch from currently word to definition list using [Vim](http://vim.org/)
+Switch from currently word using [Vim](http://vim.org/)
 
-Like `<C-a>`, `<C-x>` (in|de)crease currently number by the default Vim
+The behavior is like `<C-a>`, `<C-x>` (in|de)crease currently number by the default Vim's key-map
 
-You can customize list of the word of do (in|de)crease
+Inspired by [monday.vim](http://www.vim.org/scripts/script.php?script_id=1046)
+
+It's customizable list of the word of do (in|de)crease in your .vimrc
 
 
 Installation
@@ -73,7 +75,7 @@ let g:sunday_pairs = [
 TODO
 ----
 
-* custom mapping (ex. nnoremap <Leader>a (sunday#increase))
+* custom mapping (ex. nnoremap `<Leader>a` (sunday#increase))
 * support filetype pairs list.
 
 
@@ -82,16 +84,6 @@ Author & Contributors
 
 * Takuya Nishigori <nishigori.tak@gmail.com>
 * [Contributors](https://github.com/nishigori/vim-sunday/graphs/contributors)
-
-
-Inspired by
------------
-
-* [monday.vim][] created by Stefan Karlsson <stefan.74@comhem.se>
-* [monday-custom][] created by Taku Omi <http://nanasi.jp/>
-
-[monday.vim]:       http://www.vim.org/scripts/script.php?script_id=1046
-[monday-custom]:    http://nanasi.jp/articles/vim/monday_vim.html
 
 
 LICENSE
