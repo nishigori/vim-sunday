@@ -54,10 +54,9 @@ sunday.vim is supporting specifed pairs (variable is `g:sunday_pairs`)
   public <-> protected <-> private
 ```
 
-### Example
+### Example your vimrc
 
 ```viml
-" Your .vimrc
 let g:sunday_pairs = [
   \   ['extends', 'implements'],
   \   ['require', 'require_once', 'include', 'include_once'],
@@ -72,15 +71,8 @@ let g:sunday_pairs = [
 ```
 
 
-TODO
-----
-
-* custom mapping (ex. nnoremap `<Leader>a` (sunday#increase))
-* support filetype pairs list.
-
-
-Author & Contributors
----------------------
+Author(s)
+---------
 
 * Takuya Nishigori <nishigori.tak@gmail.com>
 * [Contributors](https://github.com/nishigori/vim-sunday/graphs/contributors)
